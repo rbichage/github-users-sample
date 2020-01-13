@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Details"
+        app:layout_constraintTop_toTopOf="parent"
+        app:contentInsetStartWithNavigation="0dp"
+        />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/user_avi"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias=".2"
+        android:background="@color/colorAccent"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toBottomOf="@id/user_avi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias=".2"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toBottomOf="@id/card1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="24dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

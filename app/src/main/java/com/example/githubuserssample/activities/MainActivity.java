@@ -1,4 +1,4 @@
-package com.example.githubuserssample;
+package com.example.githubuserssample.activities;
 
 import android.os.Bundle;
 
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.githubuserssample.R;
 import com.example.githubuserssample.adapters.UsersListAdapter;
 import com.example.githubuserssample.models.User;
 import com.example.githubuserssample.models.UsersList;
@@ -14,7 +15,6 @@ import com.example.githubuserssample.networking.ApiClient;
 import java.util.List;
 
 import okhttp3.OkHttpClient;
-import okhttp3.ResponseBody;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
