@@ -1,36 +1,30 @@
 package com.example.githubuserssample.networking;
 
-import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class RetrofitService {
-    private RetrofitService instance = null;
+public class RetrofitClient {
+    private static RetrofitClient instance = null;
     private Retrofit retrofit;
     private final String BASE_URL = "https://api.github.com/";
 
-    public RetrofitService() {
-        buildRetrofit(BASE_URL);
-    }
-
-    private void buildRetrofit(String baseUrl) {
-
+    public RetrofitClient() {
         retrofit = new Retrofit.Builder()
-                .baseUrl(baseUrl)
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-
     }
 
-    public RetrofitService getInstance() {
+
+    public static RetrofitClient getInstance() {
         if (instance == null) {
-            instance = new RetrofitService();
+            instance = new RetrofitClient();
         }
 
         return instance;
     }
 
-    public ApiClient getApi() {
-        return retrofit.create(ApiClient.class);
+    public ApiService getApi() {
+        return retrofit.create(ApiService.class);
     }
 }

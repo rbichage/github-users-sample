@@ -1,6 +1,7 @@
 package com.example.githubuserssample.models;
 
 
+import com.example.githubuserssample.networking.RetrofitClient;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -19,6 +20,7 @@ public class UsersList {
     public void setItems(List<User> items) {
         this.items = items;
     }
+
 
 }
 
