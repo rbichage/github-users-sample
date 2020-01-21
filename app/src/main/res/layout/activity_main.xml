@@ -14,6 +14,7 @@
         android:background="@color/colorAccent"
         app:title="Users"
         app:menu="@menu/home_menu"
+        android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
         />
